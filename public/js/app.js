@@ -27,7 +27,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     }
     else {
-        const url = "http://localhost:3000/weather?city=" + cityValue + "&country=" + countryValue
+        const url = "/weather?city=" + cityValue + "&country=" + countryValue
         fetch(url)
             .then(response => {
                 console.log("response : " + response.toString());
