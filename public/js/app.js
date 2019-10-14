@@ -20,6 +20,9 @@ weatherForm.addEventListener('submit', (e) => {
 
     const cityValue = document.getElementById('city').value;
     const countryValue = document.getElementById('country').value;
+    const windSpeed = document.getElementById('wind-speed')
+
+
     console.log("city:" +cityValue)
     console.log("country :"  + JSON.stringify(countryValue));
     if (countryValue=="" || cityValue=="") {
@@ -38,8 +41,10 @@ weatherForm.addEventListener('submit', (e) => {
                     }
                     else{
                         console.log(data);
-                        message1.textContent = data.City
-                        message2.textContent = data.Summary
+                        message1.textContent ="Location is : " + data.City
+                        message2.textContent ="Summary for it : "+ data.Summary
+                        windSpeed.textContent ="Wind speed is about : "+ data.windSpeed
+
                     }
                 })
             });

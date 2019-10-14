@@ -68,7 +68,8 @@ app.get('/weather' , (req, res)=>{
                     res.send({
                         City : place, 
                         Summary : currently.summary , 
-                        Temperature : currently.temperature+" degrees"
+                        Temperature : currently.temperature+" degrees",
+                        windSpeed : currently.windSpeed
                     })
                 }
 
